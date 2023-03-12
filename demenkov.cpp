@@ -16,11 +16,6 @@ TruthTableSystem::~TruthTableSystem()
         delete nodes[i];
 }
 
-void TruthTableSystem::setXRootNode(QDomNode xNode)
-{
-    this->xRootNode = xNode;
-}
-
 short *TruthTableSystem::getTruthTable(QStringList &subExpressions, int &rowAmount, int &columnAmount)
 {
     parseExpression(xRootNode); // составить векор узлов выражения на основе его корня
